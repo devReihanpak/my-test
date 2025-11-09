@@ -1,0 +1,97 @@
+اگر از SCSS استفاده می‌کنید — در CSS هم تقریباً مشابه است
+
+/* پس‌زمینهٔ نیمه‌شفاف پشت مودال */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* رنگ تیره با شفافیت */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* محتوای مودال */
+.modal-content {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 24px 32px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* تیتر مودال */
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* فرم داخل مودال */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* برچسب‌ها */
+.modal-content label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* فیلدهای ورودی */
+.modal-content input,
+.modal-content select {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* وقتی فیلد تمرکز دارد (focus) */
+.modal-content input:focus,
+.modal-content select:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 4px rgba(102, 175, 233, 0.6);
+}
+
+/* دکمه ارسال */
+.modal-content button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* دکمه بستن مودال */
+.modal-content > button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal-content > button:hover {
+  color: #555;
+}

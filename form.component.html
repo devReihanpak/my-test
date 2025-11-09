@@ -1,0 +1,23 @@
+
+<div  class="modal-overlay" >
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h2>فرم اطلاعات</h2>
+    <form>
+      <label for="name">نام:</label>
+      <input type="text" name="name" [(ngModel)]="name" placeholder="نام خود را وارد کنید">
+
+      <label for="age">سن:</label>
+      <input type="number" name="age" [(ngModel)]="age" placeholder="سن خود را وارد کنید">
+
+      <label for="education">مدرک تحصیلی:</label>
+      <select name="degree" [(ngModel)]="Madrak" placeholder="مدرک تحصیلی">
+        <option *ngFor="let option of options" [value]="option.id">{{ option.name }}</option>
+      </select>
+
+      <button type="button" (click)="submitForm()">ارسال</button>
+    </form>
+    <button  type="button" (click)="closeForm()">بستن</button>
+  </div>
+</div>
+
+

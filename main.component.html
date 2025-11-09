@@ -1,0 +1,17 @@
+
+<div class="container">
+  <button (click)="openForm()">باز کردن فرم</button>
+
+<app-form *ngIf="showForm" (close)="closeForm()" (save)="saveFormData($event)"></app-form>
+
+<!-- ورودی جستجو -->
+  <div class="search-area">
+    <label for="search">جستجو بر اساس نام:</label>
+    <input id="search" type="text" [(ngModel)]="searchText" placeholder="جستجو...">
+  </div>
+
+  <!-- نمایش درصد تطابق -->
+  <div *ngIf="searchText">
+    <p>درصد تطابق: {{ Match(searchText) }}%</p>
+  </div>
+</div>
